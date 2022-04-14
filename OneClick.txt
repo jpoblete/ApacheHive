@@ -1,0 +1,25 @@
+Apache Hive 4 Setup
+
+This script will download / setup Apache Hive 4 standalone WITHOUT Cloudera Manager
+Hive Metastore uses Apache Derby and HiveServer2 is configured to use the TEZ engine
+
+In case of ClassNotFound / MethodNotFound use the findJar / findJarByClass / linkJar
+We assume you know bash scripting ;)
+
+Beeline is to be executed as follows:
+
+su - hive
+beeline
+
+Execution Time: 5-10 minutes. 
+Be patient as the packages are being downloaded on the fly
+
+Monitoring: View LOGS on the squadron UI.
+
+Note - This script will *NOT* work if CDH / CDP is installed, be sure to use a single plain CentOS 7 node
+
+Please check LOGS button on the Squadron UI to view the Ansible playbook logs for the same.
+
+Also check /tmp/install.log
+
+If you face any issues, please ping in "prod_squadron" slack chatroom with error logs.

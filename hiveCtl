@@ -1,0 +1,68 @@
+#!/bin/bash
+#
+# Author: j.martinez.poblete@cloudera.com
+#
+# This script provides the ability to: 
+#
+# * Start/Stop/Restart HS2/HMS servers
+# * Build Hive 4 from scratch
+# * Switch execution from binary tarball to build
+# * Rebase build
+# * Others TBD
+#
+# EXECUTE AS ROOT:
+#
+# chmod +x ${PROJECT_HOME}/buildHive.sh
+# ${PROJECT_HOME}/hiveCtl.sh
+#
+# Load ENV / Functions
+#
+export WORK=/opt/apache
+export PROJECT_HOME=${WORK}/ApacheHive
+. ${PROJECT_HOME}/functions.sh
+#
+function help(){
+   echo "Usage:  hiveCtl [status|start|stop|restart|reInitSchema|rebase|checkout|switchBuild]"
+}
+#
+# Main
+#
+main(){
+case $1 in 
+     start)
+        startHive
+        ;;
+     stop)
+        stopHive
+        ;;
+     restart)
+        stopHive
+        startHive
+        ;;
+     status)
+        statusHive
+        ;;
+     reInitSchema)
+        stopHive
+        reInitSchema
+        startHive
+        ;;
+     rebase)
+        rebaseHive
+        ;;
+     switchBuild)
+        switchHiveBuild
+        ;;
+     checkout)
+        args=${@:2}
+        for commit in ${args}; do
+            checkOut ${commit}
+        done
+        ;;
+     *)
+        help
+        ;;
+esac     
+}
+main ${@}| tee -a /tmp/${LOG}
+#EOF
