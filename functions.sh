@@ -456,6 +456,7 @@ function testBL(){
 function setupRootUsr(){
    echo "Adding variables to root shell environment..."
    cat  ${PROJECT_HOME}/root_profile >> /root/.bash_profile
+   . /root/.bash_profile
 }
 function setupHiveUsr(){
    echo "Setting Hive user shell environment..."
