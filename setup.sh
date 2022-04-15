@@ -8,7 +8,7 @@
 # Main ENV vars
 #
 export WORK=/opt/apache
-export PROJECT_HOME=${WORK}/ApacheHive
+export PROJECT_HOME=${WORK}/Hive
 . ${PROJECT_HOME}/functions.sh
 #
 # Main
