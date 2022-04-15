@@ -4,7 +4,7 @@ export TEZ_HOME=${WORK}/tez
 export HIVE_HOME=${WORK}/hive
 export HADOOP_HOME=${WORK}/hadoop
 export DERBY_HOME=${WORK}/db-derby
-export PROJECT_HOME=${WORK}/ApacheHive
+export PROJECT_HOME=${WORK}/Hive
 export PATH="${PROJECT_HOME}:${HIVE_HOME}/bin:${PATH}"
 . ${PROJECT_HOME}/functions.sh
 chmod +x ${PROJECT_HOME}/hiveCtl
