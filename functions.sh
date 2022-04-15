@@ -128,6 +128,7 @@ function osExtras(){
    #
    # Packages for node1
    #
+   yumSilent wget
    if [ "${node}" == "node1" ]; then
       yumSilent https://dev.mysql.com/get/mysql80-community-release-el7-5.noarch.rpm
       yumSilent mysql-server
