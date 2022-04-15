@@ -1,4 +1,3 @@
-# ApacheHive
 Setup Apache Hive standalone on CentOS 
 Instructions: 
 
