@@ -13,7 +13,7 @@ LOG=${0##*/}
 LOG=${LOG/sh/log}
 export WORK=/opt/apache 
 export JAVA_HOME=/usr/java
-export PROJECT_HOME=${WORK}/ApacheHive
+export PROJECT_HOME=${WORK}/Hive
 #
 # Foundations
 #
