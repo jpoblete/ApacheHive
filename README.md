@@ -1,4 +1,5 @@
-Setup Apache Hive standalone on CentOS 
+Setup Apache Hive standalone on CentOS
+
 Instructions: 
 
 * Download install.sh to /root
