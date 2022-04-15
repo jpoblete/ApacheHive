@@ -4,6 +4,7 @@
 #
 # This script provides functions across scripts
 #
+PROJECT=Hive
 LOG=${0##*/}
 LOG=${LOG/sh/log}
 export WORK=/opt/apache 
@@ -12,7 +13,7 @@ export TEZ_HOME=${WORK}/tez
 export HIVE_HOME=${WORK}/hive
 export HADOOP_HOME=${WORK}/hadoop
 export DERBY_HOME=${WORK}/db-derby
-export PROJECT_HOME=${WORK}/ApacheHive
+export PROJECT_HOME=${WORK}/${PROJECT}
 export TEZ_HOME=${WORK}/tez
 ENV="${ENV} export WORK=${WORK};"
 ENV="${ENV} export TEZ_HOME=${WORK}/tez"
