@@ -53,7 +53,7 @@ function getOsTools(){
       yumSilent install git
    fi
    createUser hive
-   git clone https://github.infra.cloudera.com/jpoblete/ApacheHive.git
+   git clone git@github.com:jpoblete/Hive.git
    exitState "$?" "Cloning project"
    chmod +x ${PROJECT_HOME}/setup.sh
 }       
