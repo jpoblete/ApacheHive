@@ -1,5 +1,5 @@
 # ApacheHive
-Setup Apache Hive 4 on Squadron node
+Setup Apache Hive standalone on CentOS 
 Instructions: 
 
 * Download install.sh to /root
