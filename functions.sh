@@ -198,6 +198,7 @@ function checkOut(){
 }
 function getHive(){
    # Retrieving the latest Apache Hive build
+   export MAVEN_OPTS="-Xmx1024M"
    cd ${WORK}
    [ -z "${MVN}" ] && MVN=$(find ${WORK} -name mvn -type f) && export MVN 
    status=1
