@@ -198,6 +198,9 @@ function checkOut(){
 }
 function getHive(){
    # Retrieving the latest Apache Hive build
+   # Make sure the machine has at least 4-8 Gb RAM
+   # Maven is surely to fail below that
+   #
    export MAVEN_OPTS="-Xmx1024M"
    cd ${WORK}
    [ -z "${MVN}" ] && MVN=$(find ${WORK} -name mvn -type f) && export MVN 
@@ -218,9 +221,9 @@ function getHive(){
    mv apache-hive apache-hive-${version}
    cd apache-hive-${version}
    ${MVN} -q clean install  -DskipTests -Dmaven.javadoc.skip=true -Drat.skip=true
-   status2=0
+   status2=$?
    ${MVN} -q package -Pdist -DskipTests -Dmaven.javadoc.skip=true -Drat.skip=true
-   status3=0
+   status3=$?
    cd ${WORK}
    build=$(ls -1 apache-hive-${version}/packaging/target/*-bin/)
    ln -s apache-hive-${version}/packaging/target/${build}/${build} ${build}
