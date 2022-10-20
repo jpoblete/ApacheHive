@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Author: j.martinez.poblete@cloudera.com
+# Author: j.martinez.poblete@gmail.com
 #
 # This script is NOT executed directly
 # It is invoked from install.sh
