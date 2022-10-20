@@ -1,5 +1,5 @@
 #
-# Author: j.martinez.poblete@cloudera.com
+# Author: j.martinez.poblete@gmail.com
 # 
 # This is for hive environment to be set
 #
