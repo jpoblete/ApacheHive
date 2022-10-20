@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Author: j.martinez.poblete@cloudera.com
+# Author: j.martinez.poblete@gmail.com
 #
 # This script will install Hive 4 standalone
 # Execute the script from anywhere
