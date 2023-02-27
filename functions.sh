@@ -311,7 +311,7 @@ function getDerby(){
    getPkg db-derby ${version} https://archive.apache.org/dist/db/derby/db-derby-${version}/db-derby-${version}-bin.tar.gz ${DERBY_HOME##*/}
 }
 function getTez(){
-   # Get Derby version from Hive pom.xml (currently v10.14.1.0)
+   # Get TEZ version from Hive pom.xml (currently v0.10.2)
    version=$(awk '/<tez.version>[0-9]/' ${WORK}/apache-hive-${HIVE_VERSION}/pom.xml)
    version=${version#*>}
    version=${version%<*}
