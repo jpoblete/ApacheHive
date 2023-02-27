@@ -14,7 +14,7 @@ export HIVE_HOME=${WORK}/hive
 export HADOOP_HOME=${WORK}/hadoop
 export DERBY_HOME=${WORK}/db-derby
 export PROJECT_HOME=${WORK}/${PROJECT}
-export TEZ_HOME=${WORK}/tez
+
 ENV="${ENV} export WORK=${WORK};"
 ENV="${ENV} export TEZ_HOME=${WORK}/tez"
 ENV="${ENV} export JAVA_HOME=${JAVA_HOME};"
